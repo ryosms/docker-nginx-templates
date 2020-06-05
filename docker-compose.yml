@@ -5,6 +5,7 @@ services:
         image: nginx:1.19
         environment:
             SERVER_NAME: localhost
+            NGINX_CLIENT_MAX_BODY_SIZE: 10M
         volumes: 
             - ./volumes/nginx/templates:/etc/nginx/templates
         ports:
