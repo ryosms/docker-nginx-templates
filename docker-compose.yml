@@ -1,0 +1,11 @@
+---
+version: '3.7'
+services: 
+    nginx:
+        image: nginx:1.19
+        environment:
+            SERVER_NAME: localhost
+        volumes: 
+            - ./volumes/nginx/templates:/etc/nginx/templates
+        ports:
+            - 8080:80
